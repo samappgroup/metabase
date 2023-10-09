@@ -19,10 +19,14 @@ JAVA_OPTS+=" -Xverify:none"                    # Skip bytecode verification, the
 JAVA_OPTS+=" -XX:+UseG1GC"                     # G1GC seems to use slightly less memory in my testing...
 JAVA_OPTS+=" -XX:+UseStringDeduplication"      # Especially when used in combination with string deduplication
 
+# Set min and max memory to 1G
+JAVA_OPTS+=" -Xms1G -Xmx1G"
+
 # Other Java options
 JAVA_OPTS+=" -server"                  # Run in server mode. This is the default for 64-bit JVM
 JAVA_OPTS+=" -Djava.awt.headless=true" # don't try to start AWT. Not sure this does anything but better safe than wasting memory
 JAVA_OPTS+=" -Dfile.encoding=UTF-8"    # Use UTF-8
+
 
 # Set timezone using the JAVA_TIMEZONE variable if present
 if [ "$JAVA_TIMEZONE"]; then
