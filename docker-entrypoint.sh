@@ -20,7 +20,7 @@ JAVA_OPTS+=" -XX:+UseG1GC"                     # G1GC seems to use slightly less
 JAVA_OPTS+=" -XX:+UseStringDeduplication"      # Especially when used in combination with string deduplication
 
 # Set min and max memory to 1G
-JAVA_OPTS+=" -Xms1G -Xmx1G"
+JAVA_OPTS+=" -Xms800M -Xmx800M"
 
 # Other Java options
 JAVA_OPTS+=" -server"                  # Run in server mode. This is the default for 64-bit JVM
