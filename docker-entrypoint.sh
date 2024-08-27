@@ -19,8 +19,8 @@ JAVA_OPTS+=" -Xverify:none"                    # Skip bytecode verification, the
 JAVA_OPTS+=" -XX:+UseG1GC"                     # G1GC seems to use slightly less memory in my testing...
 JAVA_OPTS+=" -XX:+UseStringDeduplication"      # Especially when used in combination with string deduplication
 
-# Set min and max memory to 1G
-JAVA_OPTS+=" -Xms800M -Xmx800M"
+# Set min and max memory to 300M
+JAVA_OPTS+=" -Xms350M -Xmx350M"
 
 # Other Java options
 JAVA_OPTS+=" -server"                  # Run in server mode. This is the default for 64-bit JVM
